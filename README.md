@@ -35,7 +35,7 @@ $ faces
 ## Installation
 
 ```
-$ go get github.com/mattn/cool-ascii-faces
+$ go get github.com/mattn/cool-ascii-faces/...
 ```
 
 ## Author
