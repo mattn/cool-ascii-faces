@@ -13,7 +13,7 @@ for c := range faces.Stream() {
 ## Command-Line
 
 ```
-$ files
+$ faces
 (っ◕‿◕)っ
 ( ˘ ³˘)♥
 ~(˘▾˘~)
