@@ -2,6 +2,7 @@ package faces
 
 import (
 	"math/rand"
+	"time"
 )
 
 var faces = []string{
@@ -168,6 +169,10 @@ var faces = []string{
 	"•̀.̫•́✧",
 	"(ᵒ̤̑ ₀̑ ᵒ̤̑)",
 	"\\_(ʘ_ʘ)_/",
+}
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
 }
 
 func String() string {
