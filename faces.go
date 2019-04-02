@@ -1,6 +1,7 @@
 package faces
 
 import (
+	"context"
 	"math/rand"
 	"time"
 )
@@ -179,10 +180,16 @@ func String() string {
 	return faces[rand.Int()%len(faces)]
 }
 
-func Stream() chan string {
+func Stream(ctx context.Context) <-chan string {
 	c := make(chan string)
 	go func() {
+		defer close(c)
 		for {
+			select {
+			case <-ctx.Done():
+				return
+			default:
+			}
 			c <- String()
 		}
 	}()
